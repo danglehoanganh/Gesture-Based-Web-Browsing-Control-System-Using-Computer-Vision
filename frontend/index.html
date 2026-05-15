@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Gesture News Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app" id="demoWindow">
+
+    <section class="left-panel">
+        <h1>Gesture News</h1>
+        <p>Điều khiển bản tin bằng cử chỉ tay</p>
+
+        <div class="camera-box">
+            <h3>Camera nhận diện</h3>
+            <div class="camera-wrapper">
+                <img id="cameraFrame" alt="Camera Feed">
+                <div class="camera-placeholder">Camera Preview</div>
+                <div id="cameraStatus" class="camera-status">Đang chờ kết nối...</div>
+            </div>
+        </div>
+
+        <div class="result-box">
+            <h3>Kết quả nhận diện</h3>
+            <p>Gesture: <span id="gestureText">NONE</span></p>
+            <p>Active hand: <span id="activeHand">NONE</span></p>
+            <p>Confidence: <span id="confidence">0.00</span></p>
+            <p>Action: <span id="actionText">Đang chờ...</span></p>
+            <p>Chủ đề: <span id="topicText">Tất cả</span></p>
+            <p>Tin hiện tại: <span id="newsText">1 / 12</span></p>
+
+            <div class="voice-box">
+                <h3>Voice Assistant</h3>
+                <p id="voiceText">Đang chờ...</p>
+            </div>
+        </div>
+
+
+        <div class="guide-box">
+            <h3>Cử chỉ demo</h3>
+            <p>☝️ SCROLL_DOWN: lướt xuống</p>
+            <p>✌️ SCROLL_UP: lướt lên</p>
+            <p>➡️ NEXT: vuốt chủ đề sang phải</p>
+            <p>⬅️ PREV: vuốt chủ đề sang trái</p>
+            <p>🤏 CLICK: chọn/chạm</p>
+        </div>
+    </section>
+
+    <section class="main-panel">
+
+        <header>
+            <div>
+                <h2>Bản tin thông minh</h2>
+                <p>Lướt tin không chạm bằng thị giác máy tính</p>
+            </div>
+            <button id="themeBtn">Đổi giao diện</button>
+        </header>
+
+        <div class="topic-wrapper">
+            <button class="topic-card active" data-topic="all">Tất cả</button>
+            <button class="topic-card" data-topic="ai">AI</button>
+            <button class="topic-card" data-topic="vision">Computer Vision</button>
+            <button class="topic-card" data-topic="iot">IoT</button>
+            <button class="topic-card" data-topic="web">Web</button>
+            <button class="topic-card" data-topic="robot">Robot</button>
+            <button class="topic-card" data-topic="security">Bảo mật</button>
+            <button class="topic-card" data-topic="city">Smart City</button>
+        </div>
+
+        <main id="newsFeed">
+
+            <article class="news-card" data-topic="ai">
+                <span>AI</span>
+                <h3>AI thay đổi cách con người tiếp cận thông tin</h3>
+                <p>Trí tuệ nhân tạo hỗ trợ cá nhân hóa nội dung, gợi ý tin tức và phân tích hành vi người dùng.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="vision">
+                <span>Computer Vision</span>
+                <h3>Thị giác máy tính trong điều khiển không chạm</h3>
+                <p>Camera có thể nhận diện bàn tay, vị trí ngón tay và chuyển động để tạo ra lệnh điều khiển.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="iot">
+                <span>IoT</span>
+                <h3>Thiết bị thông minh ngày càng phổ biến</h3>
+                <p>IoT kết nối cảm biến, camera và hệ thống điều khiển để xây dựng môi trường thông minh hơn.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="web">
+                <span>Web</span>
+                <h3>WebSocket giúp giao tiếp thời gian thực</h3>
+                <p>Backend Python gửi dữ liệu cử chỉ liên tục sang frontend mà không cần tải lại trang.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="robot">
+                <span>Robot</span>
+                <h3>Robot tương tác bằng cử chỉ</h3>
+                <p>Cử chỉ tay là phương thức tự nhiên để con người giao tiếp với robot trong không gian thực.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="security">
+                <span>Bảo mật</span>
+                <h3>Bảo mật trong hệ thống camera AI</h3>
+                <p>Dữ liệu hình ảnh cần được xử lý an toàn, hạn chế lưu trữ thông tin nhạy cảm của người dùng.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="city">
+                <span>Smart City</span>
+                <h3>Thành phố thông minh và giao diện không chạm</h3>
+                <p>Kiosk, bảng thông tin công cộng và màn hình tra cứu có thể dùng điều khiển bằng cử chỉ.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="ai">
+                <span>AI</span>
+                <h3>Mô hình học máy nhận diện cử chỉ</h3>
+                <p>RandomForest có thể phân loại cử chỉ dựa trên 21 landmark bàn tay từ MediaPipe.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="vision">
+                <span>Computer Vision</span>
+                <h3>MediaPipe Hand Tracking</h3>
+                <p>MediaPipe cung cấp 21 điểm đặc trưng của bàn tay, giúp trích xuất dữ liệu để train model.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="web">
+                <span>Web</span>
+                <h3>Frontend phản hồi theo gesture</h3>
+                <p>JavaScript nhận lệnh từ WebSocket để cuộn tin, đổi chủ đề, click nút và cập nhật log.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="security">
+                <span>Bảo mật</span>
+                <h3>Không lưu ảnh người dùng khi không cần thiết</h3>
+                <p>Hệ thống có thể chỉ xử lý landmark thay vì lưu ảnh gốc để giảm rủi ro về riêng tư.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+            <article class="news-card" data-topic="city">
+                <span>Smart City</span>
+                <h3>Màn hình công cộng điều khiển không chạm</h3>
+                <p>Ứng dụng phù hợp cho bệnh viện, trường học, trung tâm thương mại và triển lãm công nghệ.</p>
+                <button class="like-btn">Like</button>
+            </article>
+
+        </main>
+
+    </section>
+
+    <section class="right-panel">
+        <h3>Log nhận diện</h3>
+        <ul id="logList"></ul>
+    </section>
+
+
+
+    <div id="rightCursor"></div>
+    <div id="leftCursor"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

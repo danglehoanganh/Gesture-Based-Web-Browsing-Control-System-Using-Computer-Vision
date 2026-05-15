@@ -1,0 +1,25 @@
+# Core CV
+
+opencv-python==4.9.0.80
+mediapipe==0.10.14
+numpy==1.26.4
+
+# Web
+
+flask==3.0.2
+flask-cors==4.0.0
+
+# Deep Learning (TensorFlow)
+
+tensorflow==2.15.0
+keras==2.15.0
+
+# Data & Utils
+
+scikit-learn==1.4.2
+pandas==2.2.2
+matplotlib==3.8.4
+
+# Optional (real mouse)
+
+pyautogui==0.9.54
