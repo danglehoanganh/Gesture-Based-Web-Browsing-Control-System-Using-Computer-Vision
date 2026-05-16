@@ -23,9 +23,7 @@
   <a href="#">
     <img src="https://img.shields.io/badge/WebSocket-orange?style=for-the-badge" />
   </a>
-  <a href="#">
-    <img src="https://img.shields.io/badge/Next.js-black?style=for-the-badge" />
-  </a>
+ 
 </p>
 
 ---
