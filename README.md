@@ -144,57 +144,7 @@ Hệ thống bao gồm 4 mô-đun chính:
 3. WebSocket Communication Layer
 4. Frontend News Browsing Interface
 
----
 
-## 📌 System Architecture
-
-<p align="center">
-  <img src="Gemini_Generated_Image_9dx6qm9dx6qm9dx6.png" width="850">
-</p>
-
-<p align="center">
-Hình 1. Overall system architecture
-</p>
-
----
-
-# 🔄 5. Quy trình xử lý hệ thống
-
-## 📌 Gesture Recognition Pipeline
-
-<p align="center">
-  <img src="Gemini_Generated_Image_cxt9kccxt9kccxt9.png" width="850">
-</p>
-
-<p align="center">
-Hình 2. Gesture recognition processing pipeline
-</p>
-
----
-
-## 📌 Real-Time Data Flow
-
-<p align="center">
-  <img src="Gemini_Generated_Image_2cr2vm2cr2vm2cr2.png" width="850">
-</p>
-
-<p align="center">
-Hình 3. Real-time data flow between system modules
-</p>
-
----
-
-## 📌 Supported Hand Gestures
-
-<p align="center">
-  <img src="Gemini_Generated_Image_w5ej5pw5ej5pw5ej.png" width="850">
-</p>
-
-<p align="center">
-Hình 4. Supported hand gestures and commands
-</p>
-
----
 
 # 🖥️ 6. Giao diện hệ thống
 
